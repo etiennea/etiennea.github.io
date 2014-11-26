@@ -1,6 +1,6 @@
-html,body{ 
-  margin:0;
-  overflow: hidden;
+html, body{
+	margin:0;
+	position: relative;
 }
 
 canvas{
@@ -9,7 +9,7 @@ canvas{
 }
 
 #particles-js{
-  height:100%;
-  background:#b61924;
-  min-height: 100%;
+	height: 100%;
+	background: #b61924;
+	min-height: 100%;
 }

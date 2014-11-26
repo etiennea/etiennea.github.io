@@ -2,23 +2,27 @@
 <head>
 	<link type="text/css" href="css/etiennea.css" media="all" rel="stylesheet">
 	<link type="text/css" href="css/iphones.css" media="all" rel="stylesheet">
-	<link type="text/css" href="css/termial.css" media="all" rel="stylesheet">
+	<link type="text/css" href="css/terminal.css" media="all" rel="stylesheet">
 </head>
-<body style="overflow: hidden">
-	<div class="marvel-device iphone6 gold" style="position: absolute;left: 50%;margin-left: -205px;top: 50%;margin-top: -405px;">
-		<div class="top-bar"></div>
-		<div class="sleep"></div>
-		<div class="volume"></div>
-		<div class="camera"></div>
-		<div class="sensor"></div>
-		<div class="speaker"></div>
-		<div class="screen" id="terminal">
+<body>
+	<div style="position: fixed; width: 100%; height: 100%; overflow: hidden !important">
 
+		<div class="marvel-device iphone6 gold" style="height: 65%; left: 50%; margin-left: -205px; margin-top: 25px">
+			<div class="top-bar"></div>
+			<div class="sleep"></div>
+			<div class="volume"></div>
+			<div class="camera"></div>
+			<div class="sensor"></div>
+			<div class="speaker"></div>
+			<div class="screen" id="terminal">
+
+			</div>
+			<div class="home"></div>
+			<div class="bottom-bar"></div>
 		</div>
-		<div class="home"></div>
-		<div class="bottom-bar"></div>
+
+		<div id="particles-js" style="position: absolute; top: 0px; width: 100%; height: 100%"></div>
 	</div>
-	<div id="particles-js"></div>
 	<script src="js/lib/particles.js"></script>
 	<script src="js/lib/terminal.js"></script>
 	<script src="js/app.js"></script>

@@ -51,27 +51,42 @@ var terminal = new Terminal('terminal', {
 	execute: function(cmd, args) {
 		switch (cmd) {
 			case 'clear':
-				terminal.clear();
-				return '';
+			terminal.clear();
+			return '';
 
 			case 'help':
-				return 'Useful commands: apps, app, blog, contact, clear, etc';
+			return 'Useful commands: apps, app, blog, contact, clear, etc';
+
 
 			case 'apps':
-				return 'Available apps: voice<br>To open an app type "app voice"';
-
 			case 'app':
-				if (args && args[0]) {
-					if (args[0] === 'voice') {
-						alert();
-						return '';
-					}
+			if (args && args[0]) {
+				if (args[0] === 'voice') {
+					window.open(
+						'https://voicepolls.com/',
+						'_blank'  
+						);
+					return '';
 				}
-				return 'To open an app type "app voice"<br>Available apps: <br>- voice<br>';
+				if(args[0] === 'rateme'){
+					window.open(
+						'http://rateme.today/',
+						'_blank'  
+						);
+					return '';
+				}
+			}
+			return 'Available apps: voice, rateme<br>To open an app type "app voice"';
 
+			case 'blog':
+			window.open(
+				'https://etiennead.svbtle.com/',
+					'_blank' // <- This is what makes it open in a new window.
+					);
+			return '';
 			case 'ver':
 			case 'version':
-				return '1.0.0';
+			return '1.0.0';
 
 			case 'sudo':
 			case 'node':
@@ -79,22 +94,23 @@ var terminal = new Terminal('terminal', {
 			case 'grunt':
 			case 'rm *':
 			case 'npm':
-				return 'please send me your cv: <a href="mailto:etienne@voicepolls.com">etienne@voicepolls.com</a>';
+			case 'cd':
+			return 'please send me your cv: <a href="mailto:etienne@voicepolls.com">etienne@voicepolls.com</a>';
 
 			case 'contact':
-				return 'my email: <a href="mailto:etienne@voicepolls.com">etienne@voicepolls.com</a>';
+			return 'my email: <a href="mailto:etienne@voicepolls.com">etienne@voicepolls.com</a>';
 
 
 			case 'ls':
 			case 'dir':
-				return 'sourcecode public .git .gitignore';
+			return 'sourcecode public .git .gitignore';
 
 			default:
 				// Unknown command.
 				return false;
-		};
-	}
-});
+			};
+		}
+	});
 
 var showText = function(target, msg, index, interval) {
 
